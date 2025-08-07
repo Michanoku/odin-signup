@@ -8,6 +8,7 @@
 }
 
 :root {
+    --light-color: whitesmoke;
     font-size: 16px;
 }
 
@@ -22,25 +23,40 @@
 #title {
     position: absolute;
     top: 30%;
-    background-color: rgba(0, 0, 0, 0.308);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.13);
 }
 
-#title > div:first-child {
-    background-image: url('img/background.jpg');
-    background-size: auto auto;
-    background-repeat: no-repeat;
-    background-position: center; 
+#credits {
+    position: absolute;
+    color: var(--light-color);
+    bottom: 0%;
+    padding: 5px;
+    text-align: end;
+    width: 100%;
+    font-size: clamp(0.5rem, 0.75rem + 1vw, 1rem);
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+#logo {
+    height: clamp(3rem, 0.75rem + 6vw, 5rem);
 }
 
 #title > div:last-child {
     font-family: "title", Helvetica, Arial, sans-serif;
-    font-size: clamp(2rem, 0.75rem + 4vw, 3rem);
+    color: transparent;
+    font-size: clamp(2rem, 0.75rem + 5vw, 4rem);
+    background: linear-gradient(to bottom,#ffffff 0%,#96c8ff 35%,#0030ff 70%,#010b56 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 #container {
     display: flex;
     justify-content: space-between;
-    background-color: yellow;
     height: 100vh;
     width: 100vw;
 }
@@ -61,5 +77,5 @@
 
 #container > div:last-child {
     width: max(60vw, 700px);
-    background-color: red;
+    background-color: var(--light-color);
 }
