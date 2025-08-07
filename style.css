@@ -8,14 +8,18 @@
 }
 
 :root {
-    --light-color: whitesmoke;
     font-size: 16px;
+    --light-color: whitesmoke;
+    --accent-color: #8295fd;
+    --text-big: clamp(1.2rem, 0.9rem + 1.2vw, 1.6rem);
+    --text-medium: clamp(1rem, 0.8rem + 1vw, 1.3rem);
+    --text-small: clamp(0.85rem, 0.7rem + 0.5vw, 1rem);
 }
 
 * {
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
+    font-size: var(--text-big);
     margin: 0px;
     padding: 0px;
 }
@@ -37,7 +41,7 @@
     padding: 5px;
     text-align: end;
     width: 100%;
-    font-size: clamp(0.5rem, 0.75rem + 1vw, 1rem);
+    font-size: var(--text-small);
     background-color: rgba(0, 0, 0, 0.541);
 }
 
@@ -95,6 +99,7 @@
 }
 
 #signup > div:nth-child(2) {
+    font-size: var(--text-medium);
     height: 30%;
     background-color:white;
     -webkit-box-shadow: 0px 2px 10px 3px #CBCBCB; 
@@ -102,5 +107,21 @@
 }
 
 #signup > div:last-child {
+    font-size: var(--text-medium);
     height: 35%;
+}
+
+button {
+    padding: 15px 40px;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    border: 0;
+    -webkit-box-shadow: 0px 2px 10px 3px #CBCBCB; 
+    box-shadow: 0px 2px 10px 3px #CBCBCB;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
 }
