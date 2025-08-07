@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'title';
+    src: url('fonts/CCOverbyteOff-Regular.woff2') format('woff2'),
+        url('fonts/CCOverbyteOff-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+}
+
+.title {
+    font-family: "title", Helvetica, Arial, sans-serif;
+    font-size: clamp(2rem, 0.75rem + 4vw, 3rem);
+}
+
+.title::before {
+    content: url('img/watermark.png'); /* Replace with your image path */
+    /* Optional: Add styling for positioning, size, etc. */
+    display: inline-block; /* or block, flex, etc. depending on your layout */
+    width: clamp(2rem, 0.75rem + 4vw, 3rem);
+    height: auto;
+}
+
