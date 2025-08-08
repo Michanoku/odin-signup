@@ -11,6 +11,7 @@
     font-size: 16px;
     --light-color: whitesmoke;
     --accent-color: #8295fd;
+    --accent-muted-color: #687eff;
     --text-big: clamp(1.2rem, 0.9rem + 1.2vw, 1.6rem);
     --text-medium: clamp(1rem, 0.8rem + 1vw, 1.3rem);
     --text-small: clamp(0.85rem, 0.7rem + 0.5vw, 1rem);
@@ -36,18 +37,18 @@ input {
 
 input {
     border: 1px solid lightgrey;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px 5px;
     font-size: var(--text-small);
 }
 
 input:focus {
-    border: 1px solid royalblue;
+    border: 1px solid var(--accent-color);
     -webkit-box-shadow: 5px 4px 5px 0px #C1C1C1; 
     box-shadow: 5px 4px 5px 0px #C1C1C1;
 }
 
-input:invalid {
+input:user-invalid {
     border: 1px solid tomato;
 }
 
@@ -55,11 +56,16 @@ button {
     padding: 15px 40px;
     font-size: var(--text-medium);
     background-color: var(--accent-color);
-    border-radius: 15px;
+    border-radius: 10px;
     border: 0;
     -webkit-box-shadow: 0px 2px 10px 3px #CBCBCB; 
     box-shadow: 0px 2px 10px 3px #CBCBCB;
     margin-bottom: 40px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--accent-muted-color);
 }
 
 form {
