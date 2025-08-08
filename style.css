@@ -34,6 +34,23 @@ input {
   font: inherit;
 }
 
+input {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-size: var(--text-small);
+}
+
+input:focus {
+    border: 1px solid royalblue;
+    -webkit-box-shadow: 5px 4px 5px 0px #C1C1C1; 
+    box-shadow: 5px 4px 5px 0px #C1C1C1;
+}
+
+input:invalid {
+    border: 1px solid tomato;
+}
+
 button {
     padding: 15px 40px;
     font-size: var(--text-medium);
